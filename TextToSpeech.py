@@ -2,10 +2,9 @@ from telethon.sync import TelegramClient, events
 from telethon.sessions import StringSession
 from gtts import gTTS
 from telethon.errors import ForbiddenError
-from Alishan import Inishaikhalishan
+
 
 client = TelegramClient(StringSession(Inishaikhalishan.string), Inishaikhalishan.api_id, Inishaikhalishan.api_hash)
-
 
 @client.on(events.NewMessage(outgoing=True, pattern=r'(?i).*tts'))
 async def handler(event):
